@@ -1,18 +1,18 @@
-package com.jroslav.hilo.core;
+package com.jroslav.hilo.service;
 
-import com.jroslav.hilo.core.validate.InputHandler;
-import com.jroslav.hilo.core.validate.NonNumericInputValidator;
-import com.jroslav.hilo.core.validate.NumberOutOfRangeValidator;
+import com.jroslav.hilo.service.validate.InputHandler;
+import com.jroslav.hilo.service.validate.NonNumericInputValidator;
+import com.jroslav.hilo.service.validate.NumberOutOfRangeValidator;
 
 public class GameContext {
   private InputHandler inputHandler;
   private NonNumericInputValidator inputValidator;
-  private RandomNumber randomNumber;
+  private NumberGenerator randomNumber;
   private NumericalChecker numericalChecker;
   private NumberOutOfRangeValidator rangeValidator;
 
   public GameContext(int minNumber, int maxNumber) {
-    randomNumber = new RandomNumber(minNumber, maxNumber);
+    randomNumber = new NumberGenerator(minNumber, maxNumber);
     inputValidator = new NonNumericInputValidator();
     rangeValidator = new NumberOutOfRangeValidator(minNumber, maxNumber);
     inputHandler = new InputHandler(inputValidator, rangeValidator);
@@ -23,7 +23,7 @@ public class GameContext {
     return inputHandler;
   }
 
-  public RandomNumber getRandomNumber() {
+  public NumberGenerator getRandomNumber() {
     return randomNumber;
   }
 

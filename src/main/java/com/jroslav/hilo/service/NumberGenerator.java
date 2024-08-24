@@ -1,15 +1,15 @@
-package com.jroslav.hilo.core;
+package com.jroslav.hilo.service;
 
 import java.util.Random;
 import java.security.SecureRandom;
 
-public class RandomNumber {
+public class NumberGenerator {
 
   private final int minNumber;
   private final int maxNumber;
   private final Random random;
 
-  public RandomNumber(int minNumber, int maxNumber) {
+  public NumberGenerator(int minNumber, int maxNumber) {
     this.minNumber = minNumber;
     this.maxNumber = maxNumber;
     random = new SecureRandom();

@@ -1,6 +1,6 @@
-package com.jroslav.hilo.core;
+package com.jroslav.hilo.service;
 
-import com.jroslav.hilo.core.localization.Localization;
+import com.jroslav.hilo.service.localization.Localization;
 
 public class NumericalChecker extends Localization {
 

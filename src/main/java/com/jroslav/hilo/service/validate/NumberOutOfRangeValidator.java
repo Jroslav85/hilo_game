@@ -1,7 +1,7 @@
-package com.jroslav.hilo.core.validate;
+package com.jroslav.hilo.service.validate;
 
-import com.jroslav.hilo.core.exception.NumberOutOfRangeException;
-import com.jroslav.hilo.core.localization.Localization;
+import com.jroslav.hilo.service.exception.NumberOutOfRangeException;
+import com.jroslav.hilo.service.localization.Localization;
 
 public class NumberOutOfRangeValidator extends Localization {
   private final int minNumber;
@@ -12,7 +12,7 @@ public class NumberOutOfRangeValidator extends Localization {
     this.maxNumber = maxNumber;
   }
 
-  public boolean validate(int input) throws NumberOutOfRangeException {
+  public boolean validate(int input) {
     if (input < minNumber || input > maxNumber) {
       throw new NumberOutOfRangeException(messages.getString("RANGE_EXCEPTION"));
     }

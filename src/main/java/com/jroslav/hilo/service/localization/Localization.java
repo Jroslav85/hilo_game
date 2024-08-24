@@ -1,4 +1,4 @@
-package com.jroslav.hilo.core.localization;
+package com.jroslav.hilo.service.localization;
 
 import java.util.Locale;
 import java.util.ResourceBundle;

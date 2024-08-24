@@ -1,7 +1,7 @@
-package com.jroslav.hilo.core.validate;
+package com.jroslav.hilo.service.validate;
 
-import com.jroslav.hilo.core.exception.NonNumericInputException;
-import com.jroslav.hilo.core.exception.NumberOutOfRangeException;
+import com.jroslav.hilo.service.exception.NonNumericInputException;
+import com.jroslav.hilo.service.exception.NumberOutOfRangeException;
 
 public class InputHandler {
   private final NonNumericInputValidator validator;
@@ -13,8 +13,7 @@ public class InputHandler {
     this.rangeValidator = rangeValidator;
   }
 
-  public int parseString(String inputString)
-      throws NumberOutOfRangeException, NonNumericInputException {
+  public int parseString(String inputString) {
 
     int result = 0;
     if (validator.validate(inputString)) {

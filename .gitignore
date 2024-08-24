@@ -13,6 +13,7 @@ out/
 !**/src/test/**/out/
 
 ### Eclipse ###
+*.swp
 .checkstyle
 .apt_generated
 .classpath

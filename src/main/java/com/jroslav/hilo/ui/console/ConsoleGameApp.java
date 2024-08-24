@@ -1,10 +1,11 @@
-package com.jroslav.hilo;
+package com.jroslav.hilo.ui.console;
 
 import java.util.Scanner;
-import com.jroslav.hilo.core.GameContext;
-import com.jroslav.hilo.core.exception.NonNumericInputException;
-import com.jroslav.hilo.core.exception.NumberOutOfRangeException;
-import com.jroslav.hilo.core.localization.Localization;
+
+import com.jroslav.hilo.service.GameContext;
+import com.jroslav.hilo.service.exception.NonNumericInputException;
+import com.jroslav.hilo.service.exception.NumberOutOfRangeException;
+import com.jroslav.hilo.service.localization.Localization;
 
 public class ConsoleGameApp extends Localization {
   private int min;

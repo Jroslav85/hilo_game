@@ -1,4 +1,4 @@
-package com.jroslav.hilo.gui;
+package com.jroslav.hilo.ui.gui;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -6,10 +6,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import com.jroslav.hilo.core.GameContext;
-import com.jroslav.hilo.core.exception.NonNumericInputException;
-import com.jroslav.hilo.core.exception.NumberOutOfRangeException;
-import com.jroslav.hilo.core.localization.Localization;
+
+import com.jroslav.hilo.service.GameContext;
+import com.jroslav.hilo.service.exception.NonNumericInputException;
+import com.jroslav.hilo.service.exception.NumberOutOfRangeException;
+import com.jroslav.hilo.service.localization.Localization;
 
 public class HiloFrame extends Localization {
   private final JFrame frame;
