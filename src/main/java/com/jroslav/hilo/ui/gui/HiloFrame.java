@@ -12,7 +12,7 @@ import com.jroslav.hilo.service.exception.NonNumericInputException;
 import com.jroslav.hilo.service.exception.NumberOutOfRangeException;
 import com.jroslav.hilo.service.localization.Localization;
 
-public class HiloFrame extends Localization {
+public class HiloFrame {
   private final JFrame frame;
   private GameContext context;
   private final int MIN = 1;
@@ -26,13 +26,13 @@ public class HiloFrame extends Localization {
   public HiloFrame() {
     context = new GameContext(MIN, MAX);
 
-    frame = new JFrame(resourceBundle.getString("TITLE_APP"));
+    frame = new JFrame(Localization.getMessage("TITLE_APP"));
     frame.setDefaultCloseOperation(3);
     frame.setLocation(500, 400);
     frame.setSize(400, 300);
     frame.getContentPane().setLayout(null);
     frame.setResizable(false);
-    labelTask = new JLabel(resourceBundle.getString("TASK").formatted(MIN, MAX));
+    labelTask = new JLabel(Localization.getMessage("TASK").formatted(MIN, MAX));
     labelTask.setHorizontalAlignment(SwingConstants.RIGHT);
     labelTask.setBounds(20, 45, 200, 16);
     frame.getContentPane().add(labelTask);
@@ -77,15 +77,14 @@ public class HiloFrame extends Localization {
       fieldGuess.requestFocus();
       fieldGuess.selectAll();
     }
-
   }
 
   private void newGame() {
-    number = context.getRandomNumber().getGenerateNumber();
+    number = context.getHiddenNumber();
   }
 
   private void startNewGame(String input) {
-    if (input.endsWith(resourceBundle.getString("YOU_WIN").substring(5))) {
+    if (input.endsWith(Localization.getMessage("YOU_WIN").substring(5))) {
       newGame();
     }
   }

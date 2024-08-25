@@ -26,9 +26,9 @@ public class ConsoleGameApp {
       int tries = 0;
 
       do {
-        final int number = context.getRandomNumber().getGenerateNumber();
+        int number = context.getHiddenNumber();
         tries = 0;
-        System.out.print(Localization.getMessage("TASK").formatted(min, max));
+        printWelcomeMessage();
         boolean validInput = false;
 
         do {
@@ -47,12 +47,20 @@ public class ConsoleGameApp {
               context.getNumericalChecker().getMessagesFromEnteredNumber(guess, number));
         } while (guess != number);
 
-        System.out.print(Localization.getMessage("YOU_TRIES").formatted(tries));
+        printCongratulations(tries);
         System.out.print(Localization.getMessage("PLAY_AGAIN"));
         playAgain = console.next();
         console.nextLine();
       } while ("y".equalsIgnoreCase(playAgain));
       System.out.print(Localization.getMessage("GOODBYE"));
     }
+  }
+
+  private void printWelcomeMessage() {
+    System.out.print(Localization.getMessage("TASK").formatted(min, max));
+  }
+
+  private void printCongratulations(int tries) {
+    System.out.print(Localization.getMessage("YOU_TRIES").formatted(tries));
   }
 }
