@@ -10,7 +10,7 @@ public class NonNumericInputValidator extends Localization {
       Integer.parseInt(input);
       return true;
     } catch (RuntimeException e) {
-      throw new NonNumericInputException(messages.getString("NON_NUMERIC_EXCEPTION"));
+      throw new NonNumericInputException(resourceBundle.getString("NON_NUMERIC_EXCEPTION"));
     }
   }
 }

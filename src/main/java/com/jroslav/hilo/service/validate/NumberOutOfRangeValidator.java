@@ -14,7 +14,7 @@ public class NumberOutOfRangeValidator extends Localization {
 
   public boolean validate(int input) {
     if (input < minNumber || input > maxNumber) {
-      throw new NumberOutOfRangeException(messages.getString("RANGE_EXCEPTION"));
+      throw new NumberOutOfRangeException(resourceBundle.getString("RANGE_EXCEPTION"));
     }
     return true;
   }

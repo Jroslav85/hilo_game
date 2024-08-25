@@ -26,13 +26,13 @@ public class HiloFrame extends Localization {
   public HiloFrame() {
     context = new GameContext(MIN, MAX);
 
-    frame = new JFrame(messages.getString("TITLE_APP"));
+    frame = new JFrame(resourceBundle.getString("TITLE_APP"));
     frame.setDefaultCloseOperation(3);
     frame.setLocation(500, 400);
     frame.setSize(400, 300);
     frame.getContentPane().setLayout(null);
     frame.setResizable(false);
-    labelTask = new JLabel(messages.getString("TASK").formatted(MIN, MAX));
+    labelTask = new JLabel(resourceBundle.getString("TASK").formatted(MIN, MAX));
     labelTask.setHorizontalAlignment(SwingConstants.RIGHT);
     labelTask.setBounds(20, 45, 200, 16);
     frame.getContentPane().add(labelTask);
@@ -85,7 +85,7 @@ public class HiloFrame extends Localization {
   }
 
   private void startNewGame(String input) {
-    if (input.endsWith(messages.getString("YOU_WIN").substring(5))) {
+    if (input.endsWith(resourceBundle.getString("YOU_WIN").substring(5))) {
       newGame();
     }
   }
