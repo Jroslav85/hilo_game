@@ -3,9 +3,11 @@ package com.jroslav.hilo.ui.console;
 import java.util.Scanner;
 
 import com.jroslav.hilo.core.GameContext;
+import com.jroslav.hilo.core.config.Config;
 import com.jroslav.hilo.core.localization.Localization;
+import com.jroslav.hilo.ui.GameInterface;
 
-public class ConsoleGame {
+public class ConsoleGame implements GameInterface {
   private final int min;
   private final int max;
   private final GameContext context;
@@ -13,9 +15,9 @@ public class ConsoleGame {
   private boolean isExit = false;
   private int tries = 0;
 
-  public ConsoleGame(int min, int max) {
-    this.min = min;
-    this.max = max;
+  public ConsoleGame() {
+    min = Integer.parseInt(Config.get("min"));
+    max = Integer.parseInt(Config.get("max"));
     context = new GameContext(min, max);
   }
 

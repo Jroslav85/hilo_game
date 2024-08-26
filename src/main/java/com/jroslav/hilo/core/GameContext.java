@@ -1,9 +1,9 @@
 package com.jroslav.hilo.core;
 
+import com.jroslav.hilo.core.gamelogic.NumberGenerator;
+import com.jroslav.hilo.core.gamelogic.NumericalChecker;
 import com.jroslav.hilo.core.localization.Localization;
 import com.jroslav.hilo.core.parser.InputParser;
-import com.jroslav.hilo.core.util.NumberGenerator;
-import com.jroslav.hilo.core.util.NumericalChecker;
 import com.jroslav.hilo.core.validate.NonNumericInputValidator;
 import com.jroslav.hilo.core.validate.NumberOutOfRangeValidator;
 

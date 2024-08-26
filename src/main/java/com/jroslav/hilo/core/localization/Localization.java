@@ -9,6 +9,10 @@ public class Localization {
   protected static ResourceBundle resourceBundle;
   private Locale appLocale;
 
+  static {
+    new Localization();
+  }
+
   public Localization() {
     String locale = Config.get("hilo.locale", "en");
 

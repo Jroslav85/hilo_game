@@ -1,4 +1,4 @@
-package com.jroslav.hilo.core.util;
+package com.jroslav.hilo.core.gamelogic;
 
 import java.security.SecureRandom;
 
