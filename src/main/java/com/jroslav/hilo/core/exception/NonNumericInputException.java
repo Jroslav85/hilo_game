@@ -1,4 +1,4 @@
-package com.jroslav.hilo.service.exception;
+package com.jroslav.hilo.core.exception;
 
 @SuppressWarnings("serial")
 public class NonNumericInputException extends RuntimeException {

@@ -7,10 +7,10 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-import com.jroslav.hilo.service.GameContext;
-import com.jroslav.hilo.service.exception.NonNumericInputException;
-import com.jroslav.hilo.service.exception.NumberOutOfRangeException;
-import com.jroslav.hilo.service.localization.Localization;
+import com.jroslav.hilo.core.GameContext;
+import com.jroslav.hilo.core.exception.NonNumericInputException;
+import com.jroslav.hilo.core.exception.NumberOutOfRangeException;
+import com.jroslav.hilo.core.localization.Localization;
 
 public class HiloFrame {
   private final JFrame frame;
@@ -66,7 +66,7 @@ public class HiloFrame {
   private void checkGuess() {
     int result = 0;
     try {
-      result = context.getInputHandler().parseString(fieldGuess.getText());
+      result = context.getInputParser().parseString(fieldGuess.getText());
       String answer = context.getNumericalChecker().getMessagesFromEnteredNumber(result, number);
       labelOutput.setText(answer);
       startNewGame(answer);

@@ -1,16 +1,17 @@
-package com.jroslav.hilo.service.localization;
+package com.jroslav.hilo.core.localization;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-import com.jroslav.hilo.service.config.Config;
+import com.jroslav.hilo.core.config.Config;
 
 public class Localization {
   protected static ResourceBundle resourceBundle;
   private Locale appLocale;
 
   public Localization() {
-    String locale = Config.get("HILO_LOCALE", "en");
+    String locale = Config.get("hilo.locale", "en");
+
     if (locale != null) {
       appLocale = new Locale(locale);
       Locale.setDefault(appLocale);

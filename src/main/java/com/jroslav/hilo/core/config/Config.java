@@ -1,4 +1,4 @@
-package com.jroslav.hilo.service.config;
+package com.jroslav.hilo.core.config;
 
 import io.github.cdimascio.dotenv.Dotenv;
 

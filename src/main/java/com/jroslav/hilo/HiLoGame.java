@@ -1,7 +1,7 @@
 package com.jroslav.hilo;
 
-import com.jroslav.hilo.service.config.Config;
-import com.jroslav.hilo.ui.console.ConsoleGameApp;
+import com.jroslav.hilo.core.config.Config;
+import com.jroslav.hilo.ui.console.ConsoleGame;
 
 // import com.jroslav.hilo.gui.HiloFrame;
 
@@ -11,7 +11,7 @@ public class HiLoGame {
 
     final int min = Integer.parseInt(Config.get("min"));
     final int max = Integer.parseInt(Config.get("max"));
-    final ConsoleGameApp app = new ConsoleGameApp(min, max);
+    final ConsoleGame app = new ConsoleGame(min, max);
 
     app.start();
     //    new HiloFrame();

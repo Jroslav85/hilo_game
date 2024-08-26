@@ -1,4 +1,4 @@
-package com.jroslav.hilo.service.util;
+package com.jroslav.hilo.core.util;
 
 import java.security.SecureRandom;
 

@@ -13,7 +13,7 @@
 	<url>jroslav1985@gmail.com</url>
 
 	<properties>
-		<java.version>22</java.version>
+		<java.version>21</java.version>
 	</properties>
 
 	<dependencies>
@@ -50,7 +50,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.2.0</version>
+				<version>3.0.2</version>
 				<configuration>
 					<archive>
 						<manifest>
